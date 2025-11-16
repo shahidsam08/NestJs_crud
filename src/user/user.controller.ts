@@ -1,15 +1,17 @@
 import { Controller, Param, Post } from '@nestjs/common';
 import { Get } from '@nestjs/common';
+import { UserService } from './user.service';
 
-@Controller() 
+@Controller("user") 
 export class UserController{
-  @Get("about")
-  findUser():string {
-    return "This is about page and run through the get request. and sometime it is very like nobody talk about."
-  }
+  constructor(private readonly userdetails : UserService){}
 
-  @Post("post")
-  getPost():string {
-    return "This is post request which are only access by the postman"
+  @Get()
+  getuser(){
+    return this.userdetails.getuser();
   }
+  @Post(":id")
+  getiduser(@Param("id") id: string) {
+    return this.userdetails.getuserbyId(Number(id));
+  } 
 }
