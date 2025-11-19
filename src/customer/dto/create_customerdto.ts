@@ -1,7 +1,7 @@
 import { IsInt, IsString } from "class-validator";
 
 export class CreateCustomerdto{
-  @IsString() // decarator for string
+  @IsString() // decarator for string || used for type checking at the runtime
   name: string;
   @IsInt() // decorator for number
   age: number

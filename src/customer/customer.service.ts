@@ -28,6 +28,12 @@ export class CustomerService {
 
   // custome pipe messsage 
   customPipemessage(same: string){
+    if(typeof same === 'string'){
+      return {message : `The name is : ${same.toLowerCase()}`} 
+    }
     return {message: `The name is : ${same}`}
   }
 }
+
+
+// { message : 'messsage you want to write ( json format)'} it sends the data into the json format.
