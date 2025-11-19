@@ -5,10 +5,11 @@ import { EmployeeModule } from './employee/employee.module';
 import { BookModule } from './book/book.module';
 import { StudentModule } from './student/student.module';
 import { CustomerModule } from './customer/customer.module';
+import { MynameController } from './myname/myname.controller';
 
 @Module({
   imports: [EmployeeModule, BookModule, StudentModule, CustomerModule],
-  controllers: [AppController],
+  controllers: [AppController, MynameController],
   providers: [AppService],
 })
 export class AppModule {}

@@ -25,4 +25,9 @@ export class CustomerService {
     this.customers.push(newCustomer)
     return newCustomer;
   }
+
+  // custome pipe messsage 
+  customPipemessage(same: string){
+    return {message: `The name is : ${same}`}
+  }
 }
