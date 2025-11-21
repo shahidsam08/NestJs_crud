@@ -5,3 +5,4 @@ export interface Customer {
 }
 
 // this is for type checking and other puroses.
+// this is interface which is used to make sure that this data is must and other data comes from the user.
